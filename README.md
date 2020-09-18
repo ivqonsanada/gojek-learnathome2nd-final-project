@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1. Copy .env.example as .env
 
-```properties
+```shell
 cp .env.example .env
 ```
 
@@ -18,6 +18,6 @@ REACT_APP_ZOMATO_API_KEY=1n1h4ny45eb4g41c0nt0h4p1k3ysaj4
 
 3. Do npm start as usual
 
-```properties
+```shell
 npm start
 ```
