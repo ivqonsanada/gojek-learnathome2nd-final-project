@@ -5,11 +5,9 @@ import FoodList from 'components/food-list'
 import styles from './App.module.css'
 
 const App = () => {
-  const title = "GoZomato"
-
   return (
     <div className={styles.container}>
-      <Logo title={title} />
+      <Logo />
       <SearchBar />
       <FoodList />
     </div>
