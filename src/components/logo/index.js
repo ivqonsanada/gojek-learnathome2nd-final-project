@@ -7,7 +7,7 @@ const Logo = ({ title, src }) => {
 	return (
 		<>
 			<div className={styles.container}>
-				{ src ? <img className={styles.logoImg} src={src} /> : '' }
+				{ src ? <img className={styles.logoImg} src={src} alt="Logo" /> : '' }
                 { title ? 
                     <div className={styles.title}>{title}</div> : 
                     <div className={styles.title}>{defaultTitle}</div> 

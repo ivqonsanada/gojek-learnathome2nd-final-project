@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from 'components/logo'
 import SearchBar from 'components/search-bar'
-import FoodList from 'components/food-list'
+import RestaurantList from 'components/restaurant-list'
 import styles from './App.module.css'
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
     <div className={styles.container}>
       <Logo />
       <SearchBar />
-      <FoodList />
+      <RestaurantList />
     </div>
   )
 };
