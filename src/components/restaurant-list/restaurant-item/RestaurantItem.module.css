@@ -1,0 +1,44 @@
+.card {
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1em;
+}
+
+.cardImage {
+  width: 100%;
+  size: cover;
+  border-radius: 1em;
+}
+
+.cardBody {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  padding: 1em;
+}
+
+.cardBody > * + * {
+  margin-left: 1em;
+}
+
+.cardName {
+  font-size: 1.6rem;
+  display: grid;
+}
+
+.cardPriceRange {
+  font-size: 1.6rem;
+}
+
+.cardCuisines {
+  display: grid;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+.ellipsies {
+  text-overflow: ellipsis;
+
+  /* Needed to make it work */
+  overflow: hidden;
+  white-space: nowrap;
+}
