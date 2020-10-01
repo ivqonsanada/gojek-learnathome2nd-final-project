@@ -7,8 +7,10 @@ const SearchBar = () => {
 
     return (
         <div className={styles.container}>
-            <TextInput />
-            <Button />
+            <div>
+                Current City : <TextInput />
+            </div>
+            <Button text="Change City" />
         </div>
     )
 }

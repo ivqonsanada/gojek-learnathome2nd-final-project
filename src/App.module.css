@@ -1,3 +1,29 @@
 .container {
-    margin: 3rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+.searchBarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+.searchBarContainer > * + * {
+  margin-left: 1.5em;
+}
+
+.restaurantsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5em;
+}
+
+.bodyContainer {
+  width: 100%;
 }

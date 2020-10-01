@@ -1,7 +1,7 @@
-const Button = () => {
+import React from 'react'
+// import styles from './TextInput.module.css'
 
-    return ''
-}
+const Button = ({ text }) => <button >{text}</button>
 
 
 export default Button;

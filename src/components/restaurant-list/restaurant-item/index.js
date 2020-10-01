@@ -41,7 +41,4 @@ const RestaurantItem = ({ data }) => {
     )
 }
 
-
-
-
 export default RestaurantItem;

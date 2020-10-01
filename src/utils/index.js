@@ -1,12 +1,12 @@
 
-export const parseCitySuggestions = data =>
-  data.location_suggestions.map(e => {
+export const parseCitySuggestions = e =>
+  e.data.location_suggestions.map(e => {
     const { id, name } = e;
     return { id, name };
   });
 
-export const parseSearchRestaurants = data =>
-  data.restaurants.map(e => {
+export const parseSearchRestaurants = e =>
+  e.data.restaurants.map(data => {
     const {
       id,
       name,
@@ -14,6 +14,6 @@ export const parseSearchRestaurants = data =>
       cuisines,
       price_range: priceRange,
       user_rating: { aggregate_rating: rating }
-    } = e.restaurant;
+    } = data.restaurant;
     return { id, name, picture, cuisines, priceRange, rating };
   });

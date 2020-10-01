@@ -6,13 +6,14 @@
 
 .cardImage {
   width: 100%;
-  size: cover;
+  height: 280px;
+  object-fit: cover;
   border-radius: 1em;
 }
 
 .cardBody {
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 2fr 1fr;
   padding: 1em;
 }
 
@@ -37,8 +38,6 @@
 
 .ellipsies {
   text-overflow: ellipsis;
-
-  /* Needed to make it work */
   overflow: hidden;
   white-space: nowrap;
 }

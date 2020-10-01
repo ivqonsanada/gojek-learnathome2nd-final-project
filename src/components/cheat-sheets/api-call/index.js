@@ -5,20 +5,26 @@ import CitySuggestions from './city-suggestions';
 import Restaurants from './restaurants';
 
 const ApiCall = () => {
-  const cityQuery = 'bogor';
+  const cityQuery = 'Jakarta';
+
   const [citySuggestions, setCitySuggestions] = useState([]);
   const [restaurants, setRestaurants] = useState([]);
+  const [error, setError] = useState();
 
   useEffect(() => {
     const searchRestaurantsFromCity = async () => {
-      const cities = parseCitySuggestions(await getCities(cityQuery));
-      setCitySuggestions(cities);
+      try {
+        const cities = parseCitySuggestions(await getCities(cityQuery));
+        setCitySuggestions(cities);
 
-      if (cities.length > 0) {
-        const restaurants = parseSearchRestaurants(
-          await searchRestaurants(cities[0].id)
-        );
-        setRestaurants(restaurants);
+        if (cities.length > 0) {
+          const restaurants = parseSearchRestaurants(
+            await searchRestaurants(cities[0].id)
+          );
+          setRestaurants(restaurants);
+        }
+      } catch (error) {
+        setError(error.message);
       }
     };
 
@@ -27,6 +33,7 @@ const ApiCall = () => {
 
   return (
     <div>
+      {error && <div>Error: {error}</div>}
       <div>
         City suggestions with query {cityQuery} are:
         <div>

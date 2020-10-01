@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'index.css';
+import '@material/react-card/dist/card.css';
 import App from 'App';
 
 ReactDOM.render(

@@ -1,4 +1,8 @@
 .container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+}
+
+.container > * + * {
+  margin-left: 2rem;
 }
